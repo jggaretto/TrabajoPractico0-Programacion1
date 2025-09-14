@@ -1,23 +1,18 @@
 # Informe:
 
 ## Encapsulamiento
-Los atributos de las clases (`Estudiante`, `Materia`, `Carrera` y `Universidad`) fueron declarados como `private`.  
-Se implementaron métodos públicos `get` y `set` para acceder y modificar dichos atributos.  
-De esta forma se protege el estado interno de los objetos y se controla cómo se asignan los valores.
+En mi solución usé atributos privados en las clases para que no se puedan modificar directamente.  
+Después hice métodos getters y setters, así controlo cómo se cambian los valores.  
 
 ## Relaciones entre clases
-- La clase `Estudiante` tiene una relación con `Materia` a través de una lista de materias.
-- La clase `Carrera` contiene una lista de estudiantes y métodos para gestionarlos.
-- La clase `Universidad` contiene información general y una lista de estudiantes.
+- El estudiante tiene una lista de materias.  
+- La carrera guarda varios estudiantes.  
+- La universidad también tiene estudiantes y datos propios.  
 
-Estas relaciones permiten modelar de manera más realista el sistema académico.
+De esta forma se puede ver cómo se relacionan entre sí.  
 
 ## Validaciones en los setters
-- En la clase `Estudiante`:
-  - La edad debe ser mayor a 16 años.
-  - El promedio debe estar en el rango de 0 a 10.
-  - El nombre y apellido no pueden estar vacíos.
-- En la clase `Materia`:
-  - La calificación debe estar dentro del rango válido (0 a 10).
+- En Estudiante: verifiqué que la edad sea mayor a 16, que el promedio esté entre 0 y 10 y que nombre/apellido no estén vacíos.  
+- En Materia: la nota tiene que estar también entre 0 y 10.  
 
-Estas validaciones aseguran la integridad de los datos y evitan valores incorrectos en los objetos.
+Estas validaciones evitan que se carguen datos incorrectos.
