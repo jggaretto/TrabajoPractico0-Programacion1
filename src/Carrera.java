@@ -9,6 +9,8 @@ public class Carrera {
         this.nombre = nombre;
         this.estudiantes = new ArrayList<>();
     }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
 
     public void agregarEstudiante(Estudiante e) {
         estudiantes.add(e);
